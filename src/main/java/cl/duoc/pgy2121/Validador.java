@@ -11,4 +11,26 @@ package cl.duoc.pgy2121;
  */
 public class Validador {
     
+    public boolean verificarClave(String rut, String clave){
+        String primeros = rut.substring(0,4);
+        
+        if (primeros.equals(clave)){
+            return true;
+            
+        }else{
+            return false;
+        }
+    
+    }
+    
+    public boolean verificarCompra(int valorCompra, int montoDisponible){
+        int resta = valorCompra-montoDisponible;
+        System.out.println(""+valorCompra+ "-" +montoDisponible+ "= "+resta);
+        if (valorCompra-montoDisponible>=0){
+            
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
